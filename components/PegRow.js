@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Peg from './Peg';
 import GuessButton from './GuessButton';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 export default class PegRow extends Component {
   constructor(props) {
@@ -22,8 +22,10 @@ export default class PegRow extends Component {
 
 const styles = StyleSheet.create({
   PegRow: {
+    alignItems: 'center',
     flex: 1,
     flexDirection: 'row',
+    justifyContent: 'center',
     paddingBottom: 20
   }
 });

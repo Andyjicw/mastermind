@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TouchableHighlight, Text, StyleSheet } from 'react-native';
+import { StyleSheet, Text, TouchableHighlight } from 'react-native';
 
 export default class GuessButton extends Component {
   onPress() {
@@ -17,13 +17,13 @@ export default class GuessButton extends Component {
 
 const styles = StyleSheet.create({
   guessButton: {
-    borderWidth: 1,
     borderColor: 'black',
     borderRadius: 15,
+    borderWidth: 1,
     height: 50,
-    paddingTop: 10,
     paddingBottom: 10,
     paddingLeft: 20,
-    paddingRight: 20
+    paddingRight: 20,
+    paddingTop: 10,
   }
 });
