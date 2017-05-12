@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
-import Peg from './Peg';
-import GuessButton from './GuessButton';
 import { StyleSheet, View } from 'react-native';
+import FeedbackPegs from "./FeedbackPegs";
+import GuessButton from './GuessButton';
+import Peg from './Peg';
 
 export default class PegRow extends Component {
   constructor(props) {
-    super(props)
-    //TODO pass in actual solution
+    super(props);
+    this.state = { solution: props.solution };
   }
 
   render() {
-    const pegs = new Array(4).fill().map((_, i) => <Peg key={ `peg-${i}` } />);
+    const pegs = new Array(4).fill().map((_, i) => {
+      return <Peg key={ `peg-${i}` } />;
+    });
+
     return (
       <View style={ styles.PegRow }>
         { pegs }
         <GuessButton />
+        <FeedbackPegs />
       </View>
     );
   }
