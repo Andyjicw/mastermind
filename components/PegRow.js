@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Peg from './Peg';
-import { View } from 'react-native';
+import GuessButton from './GuessButton';
+import { View, StyleSheet } from 'react-native';
 
 export default class PegRow extends Component {
   constructor(props) {
@@ -10,6 +11,19 @@ export default class PegRow extends Component {
 
   render() {
     const pegs = new Array(4).fill().map((_, i) => <Peg key={ `peg-${i}` } />);
-    return <View style={{ flex: 1, flexDirection: 'row' }}>{ pegs }</View>;
+    return (
+      <View style={ styles.PegRow }>
+        { pegs }
+        <GuessButton />
+      </View>
+    );
   }
 }
+
+const styles = StyleSheet.create({
+  PegRow: {
+    flex: 1,
+    flexDirection: 'row',
+    paddingBottom: 20
+  }
+});

@@ -6,7 +6,7 @@ const PEG_COLORS = ['red', 'blue', 'yellow', 'orange', 'green', 'purple'];
 export default class Peg extends Component {
   constructor(props) {
     super(props);
-    this.state = { pegColorIndex: -1, empty: true }
+    this.state = { pegColorIndex: -1 }
   }
 
   onPress() {
@@ -24,11 +24,11 @@ export default class Peg extends Component {
 
 const styles = StyleSheet.create({
   peg: {
-    height: 50,
-    width: 50,
     borderColor: 'black',
-    borderWidth: 1,
     borderRadius: 25,
-    marginRight: 10
+    borderWidth: 1,
+    height: 50,
+    marginRight: 10,
+    width: 50
   }
 });

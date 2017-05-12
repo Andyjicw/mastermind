@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PegRow from './components/PegRow';
-import { View, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
 export default class App extends Component {
   constructor(props) {
@@ -9,14 +9,14 @@ export default class App extends Component {
 
   render() {
     const rows = new Array(12).fill().map((_, i) => <PegRow key={ `row-${i}` } />);
-    return <View style={ styles.container }>{ rows }</View>;
+    return <ScrollView style={ styles.container }>{ rows }</ScrollView>;
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
+    flex: 1,
     paddingTop: 20
   }
 });
